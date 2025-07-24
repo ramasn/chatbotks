@@ -41,6 +41,13 @@ export default function Home() {
             Lihat gambar menarik
           </span>
         </Link>
+        <Link
+          href="/tanya-jawab"
+          className="w-full md:w-auto bg-gradient-to-br from-fuchsia-400 to-cyan-300 hover:from-fuchsia-500 hover:to-cyan-400 text-white font-bold py-4 px-8 rounded-2xl shadow-lg text-xl transition-all duration-200 mb-4 text-center"
+          style={{ display: "block" }}
+        >
+          Tanya Jawab
+        </Link>
         <a
           href="https://wayground.com/join/quiz/687a42d282ad0b6e864fa846/start?preview=true"
           target="_blank"
@@ -49,9 +56,7 @@ export default function Home() {
         >
           <span className="text-2xl mb-2">🎮</span>
           <span className="font-bold text-lg text-blue-800">Main Kuis</span>
-          <span className="text-sm text-blue-700 mt-1">
-            Ayo coba kuis di Quizziz!
-          </span>
+          <span className="text-sm text-blue-700 mt-1">Ayo coba kuis!</span>
         </a>
       </div>
       <footer className="mt-12 text-xs text-gray-500">
