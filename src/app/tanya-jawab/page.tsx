@@ -106,37 +106,39 @@ export default function TanyaJawab() {
       </div>
       <form
         onSubmit={sendMessage}
-        className="w-full max-w-md flex gap-2 items-center animate-fade-in"
+        className="w-full max-w-md flex flex-col sm:flex-row gap-2 items-stretch sm:items-center animate-fade-in"
       >
         <input
           ref={inputRef}
           type="text"
-          className="flex-1 rounded-lg border border-fuchsia-200 px-4 py-2 shadow focus:outline-none focus:ring-2 focus:ring-fuchsia-300 transition-all"
+          className="flex-1 rounded-lg border border-fuchsia-200 px-3 py-2 sm:px-4 sm:py-2 shadow focus:outline-none focus:ring-2 focus:ring-fuchsia-300 transition-all text-sm sm:text-base"
           placeholder="Tulis pertanyaan..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
           disabled={loading}
           maxLength={200}
         />
-        <button
-          type="submit"
-          className="cursor-pointer bg-fuchsia-400 hover:bg-fuchsia-500 text-white font-bold px-4 py-2 rounded-lg shadow transition-colors duration-200 disabled:opacity-50"
-          disabled={loading || !input.trim()}
-        >
-          Kirim
-        </button>
-        <button
-          type="button"
-          className="cursor-pointer ml-2 bg-yellow-100 hover:bg-yellow-200 text-fuchsia-700 font-bold px-3 py-2 rounded-lg shadow transition-colors duration-200"
-          onClick={resetChat}
-          disabled={loading}
-        >
-          Reset
-        </button>
+        <div className="flex gap-2">
+          <button
+            type="submit"
+            className="cursor-pointer bg-fuchsia-400 hover:bg-fuchsia-500 text-white font-bold px-3 py-2 sm:px-4 sm:py-2 rounded-lg shadow transition-colors duration-200 disabled:opacity-50 text-sm sm:text-base flex-1 sm:flex-none min-w-0"
+            disabled={loading || !input.trim()}
+          >
+            Kirim
+          </button>
+          <button
+            type="button"
+            className="cursor-pointer bg-yellow-100 hover:bg-yellow-200 text-fuchsia-700 font-bold px-3 py-2 sm:px-4 sm:py-2 rounded-lg shadow transition-colors duration-200 text-sm sm:text-base flex-1 sm:flex-none min-w-0"
+            onClick={resetChat}
+            disabled={loading}
+          >
+            Reset
+          </button>
+        </div>
       </form>
       <Link
         href="/"
-        className="mt-4 text-cyan-700 underline hover:text-fuchsia-500 font-semibold transition-colors duration-200"
+        className="mt-4 text-cyan-700 underline hover:text-fuchsia-500 font-semibold transition-colors duration-200 text-sm sm:text-base"
       >
         ← Kembali ke Beranda
       </Link>
